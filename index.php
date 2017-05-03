@@ -1,8 +1,8 @@
 <?php
 
 $array = [
-	'name' => 'Plamen',
-	'age' => 48,
+	'name' => 'gudzhu',
+	'age' => 18,
 	'sex' =>'man'
 ];
 
