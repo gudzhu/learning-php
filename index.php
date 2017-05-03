@@ -3,7 +3,7 @@
 $array = [
 	'name' => 'gudzhu',
 	'age' => 18,
-	'sex' =>'man'
+	'sex' =>''
 ];
 
 $greeting = "Hello, " . $array['name'];
