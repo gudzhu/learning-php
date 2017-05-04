@@ -1,12 +1,12 @@
 <?php
 
-$array = [
-	'name' => 'gudzhu',
-	'age' => 18,
-	'sex' =>''
+$person = [
+	'name' => 'John',
+	'age' => 28,
+	'hair' => 'brown'
 ];
 
-$greeting = "Hello, " . $array['name'];
+$person['sex'] = 'man';
 
 require 'index.view.php';
 

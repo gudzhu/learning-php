@@ -15,10 +15,10 @@
     </style>
 </head>
 <body>
-<header>
-    <h1>
-        <?= $greeting; ?>
-    </h1>
-</header>
+    <ul>
+        <?php foreach ($person as $key => $value): ?>
+            <li><?= "{$key}: {$value}" ?></li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>
