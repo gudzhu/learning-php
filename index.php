@@ -1,11 +1,12 @@
 <?php
 
-$task = [
-    'title' => 'Finished homework',
-    'due' => 'today',
-    'assigned_to' => 'John',
-    'completed' => false
-];
+$animals = ['cat', 'dog'];
+$animals[] = 'pork';
+$animals[] = 'hippopotamus';
+
+echo '<pre>';
+var_dump($animals);
+echo '</pre>';
 
 require 'index.view.php';
 
