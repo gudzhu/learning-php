@@ -1,16 +1,17 @@
 <?php
 require 'functions.php';
+require 'Task.php';
 
 try {
-    $pdo = new PDO('mysql:host=127.0.0.1;dbname=mytodos', 'root', '68696');
+    $pdo = new PDO('mysql:hostname=127.0.0.1;dbname=mytodo', 'root', '68696');
 } catch (PDOException $e) {
-    die($e->getMessage());
+    die($e->getCode() . ': ' . $e->getMessage());
 }
 
-$statement = $pdo->prepare('select * from todos');
+$statement = $pdo->prepare('select * from todos;');
 $statement->execute();
-$results = $statement->fetchAll(PDO::FETCH_OBJ);
-dd($results);
+$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+//dd($tasks);
 
 require 'index.view.php';
 
