@@ -5,10 +5,15 @@
 */
 class Connection
 {
-	public static function make()
+	public static function make($config)
 	{
 		try {
-        	return new PDO('mysql:hostname=127.0.0.1;dbname=mytodo', 'root', '68696');
+        	return new PDO(
+        	    $config['connection'] . ';dbname=' . $config['name'],
+                $config['username'],
+                $config['password'],
+                $config['options']
+            );
 	    } catch (PDOException $e) {
 	        die($e->getCode() . ': ' . $e->getMessage());
 	    }
